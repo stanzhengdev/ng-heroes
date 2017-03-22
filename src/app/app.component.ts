@@ -72,14 +72,20 @@ export class Hero {
   selector: 'my-app',
   template: `
     <h1>{{title}}</h1>
-
-
+    <div *ngIf="selectedHero">
+        <h2>{{selectedHero.name}}</h2>
+        <div><label>id: </label>{{selectedHero.id}}</div>
+        <div>
+          <label>name: </label>
+          <input [(ngModel)]="selectedHero.name" placeholder="name"/>
+        </div>
+    </div>
     <div>
       <ul class="heroes">
         <li *ngFor="let hero of heroes"
             [class.selected]="hero === selectedHero"
             (click)="onSelect(hero)"
-            >
+          >
           <span class="badge">{{hero.id}}</span> {{hero.name}}
         </li>
       </ul>
