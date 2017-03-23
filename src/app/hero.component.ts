@@ -73,7 +73,7 @@ const styles = [`
   providers: [HeroService]
 })
 
-export class HeroComponent implements OnInit {
+export class HeroesComponent implements OnInit {
   constructor(private heroService: HeroService) { }
   title = 'Angular Tour of Heroes';
   selectedHero: Hero;

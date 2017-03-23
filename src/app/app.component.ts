@@ -1,5 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { HeroComponent } from './hero.component'
+import { HeroesComponent } from './hero.component'
+import { RouterModule } from '@angular/router';
+
+RouterModule.forRoot([
+    {
+        path: 'heroes',
+        component: HeroesComponent
+    }
+])
+
 
 @Component({
     selector: 'my-app',
